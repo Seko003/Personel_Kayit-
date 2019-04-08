@@ -1,0 +1,68 @@
+Personelid
+Ad
+Soyad
+Þehir
+Maaþ
+Durum
+Meslek
+--------------------------------------
+
+==>*bit= Sadece 0 ve 1 tutar.(true veya false).
+==>*char = Sabit uzunluklu veriler için kullanýlýr.ör telefon numarasý/tc kimlik numarasý
+==>*decimal(18,0)=ondalýklý verýler ýcýn kullanýlýr (18,0) virgülden önce ki ve sonra ki
+==>*smalldatetime =tarih zaman formatý  genelde bunu kullanýcaz 
+==>*smallint = (+-32)
+==>*tinyint = (0 ile 255) arasýndaki sadece tam sayýlarý alýr . ör ogrencýlerýn sýnav notlarýnda kullanýlýr.
+==>*float = ondalýklý verýler ama decimala göre daha kucuk bir aralýðý var 
+==>*varchar = degisken uzunluklu karakterler ýcýn kullanýlýr
+==>*int
+
+*bigint = büyük tam sayýlar için kullanýlýr.
+*binary(50)=ikilik tabandaki verileri tutmasý ýcýn kullanýlýr.
+*date = Tarih
+*datetime=Hem tarih hemde saat için kullanýlýr.
+*datetime2(7)=Tarih zaman formatý yanýndaki 7 salisenin duyarlýlýðý olimpiyatlardaki koþucularýn kac sanýyede býtýrdýgý 
+*datetimeoffset(7)=ülkeler arasýndaki saat farký ortak býr paydada oluþturmak ýcýn kullanýlýyor
+*geography = enlem ve boylam degerlerýný tutmak ýcýn kullanýlýr
+*geometry = acý derecelerý sýn cos tan cot degerlerý tutmak ýcýn
+*sql_variant = veri tipi bilinmeyen veriler ýcýn kullanýlýr 
+*text = cok uzun metinler ýcýn kullanýlýr
+*time(7)=sadece zamaný belýrtýyor
+*uniqueidentifier = benzersýz rastgele karakterler turetýyor 
+
+
+DML
+***************************
+Select(Seç , Listele)
+Insert(Ekle , kaydet)
+Delete(Sil)
+Update(Güncelle)
+************
+* -> Tümünü , all
+from -> den , dan þu tablodan 
+Query -> Sorgu anlamý
+where
+And (ve)
+OR (veya)
+'' metinsel ýfadelerý tek týrnak ýcýne yazýlýr
+***************************************
+--> Select * From Tbl_Personel where PerMeslek ='Öðretmen' (Bütün taplodaki verileri cekip  mesleði öðretmen olanlarý getýrdý )
+--> Select PerAd , PerSoyad From Tbl_Personel  (Mesleði öðretmen olan  ad ve soyad  getýrdý.)
+    where PerMeslek ='Öðretmen'
+--> insert into Tbl_Personel (PerAd , PerSoyad) values ('Serkan','Yüzbaþýoðlu')  ==== Burda sadece ad ve soyad ekledý.
+***********************************************
+ýnsert into tabloadý(sütunadlarý)values (parametreler)
+ExecuteNonQuery => Sorguyu calýstýr 
+ekle -sil -güncelle
+-------------------------
+update TabloAdý Set Alan1=@a1 , Alan2=@a2...
+--------------------------------------------
+Count = Sayaç (toplam kac kýsý var)
+Sum = Toplam Deðeri (personellerýn toplam maasý)
+Avg = ortalama (ortalama maaþ)
+
+-------------------------------
+Sqldatareader = Veri okuyucu
+
+
+
